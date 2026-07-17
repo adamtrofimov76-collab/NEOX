@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="TOTE">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b85d38"/><stop offset="1" stop-color="#fff0c2"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="30" stdDeviation="30" flood-color="#000" flood-opacity=".55"/></filter></defs>
+<rect width="800" height="800" rx="70" fill="#201713"/>
+<circle cx="650" cy="145" r="110" fill="#b85d38" opacity=".18"/>
+<path d="M80 650 C220 520 330 690 470 560 S670 500 740 640 L740 800 L80 800Z" fill="#b85d38" opacity=".24"/>
+<path d="M140 210 L400 95 L660 210 L610 630 Q400 720 190 630Z" fill="#0b0909" stroke="url(#g)" stroke-width="18" filter="url(#s)"/>
+<path d="M260 260 Q400 335 540 260 L505 570 Q400 620 295 570Z" fill="url(#g)" opacity=".2"/>
+<text x="400" y="430" text-anchor="middle" font-family="Impact,Arial" font-size="88" fill="#fff" letter-spacing="8">TOTE</text>
+<text x="400" y="508" text-anchor="middle" font-family="Arial" font-size="26" fill="#b85d38" letter-spacing="10">DESERT DROP</text>
+</svg>
