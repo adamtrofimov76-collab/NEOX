@@ -28,7 +28,7 @@ img { max-width: 100%; display: block; }
 .burger { display: none; background: transparent; }
 .burger span { display: block; width: 28px; height: 2px; margin: 6px 0; background: #fff; }
 
-.hero-section { position: relative; min-height: 100svh; display: grid; place-items: center; padding: 120px 20px 80px; overflow: hidden; background: radial-gradient(circle at 50% 72%, rgba(157, 78, 221, .35), transparent 42%), #05050c; }
+.hero-section { position: relative; min-height: 100svh; display: grid; place-items: center; padding: 120px 20px 80px; overflow: hidden; background-image: radial-gradient(circle at 50% 72%, rgba(157, 78, 221, .18), transparent 42%), linear-gradient(180deg, rgba(5,5,12,.04), rgba(5,5,12,.96) 96%), url('images/background-neox.svg'); background-size: cover; background-position: center; background-color: #05050c; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; }
 .hero-section::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 0 36%, rgba(0,0,0,.35) 70%, rgba(0,0,0,.75) 100%), linear-gradient(180deg, rgba(5,5,12,.05), rgba(5,5,12,.95) 96%); pointer-events: none; }
 .hero-content { position: relative; z-index: 2; width: min(980px, 100%); text-align: center; }
