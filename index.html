@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NeoxOnline — промо-сайт ПК role play игры в атмосфере Arizona Swag." />
+  <title>NeoxOnline — PC Role Play</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Главная навигация">
+      <a href="#home" class="brand" aria-label="NeoxOnline home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NeoxOnline</span>
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-comment="// CHANGE LINK HERE"><span></span><span></span><span></span></button>
+      <div class="menu">
+        <a href="#updates">Новости</a>
+        <a href="#launcher">Лаунчер</a>
+        <a href="#online">Онлайн</a>
+        <a href="#about">Об игре</a>
+        <button class="nav-button" data-comment="// CHANGE LINK HERE">Кабинет</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <img class="hero-bg" src="images/background-neox.svg" alt="Фиолетовый космический фон NeoxOnline" data-comment="// CHANGE IMAGE HERE" />
+      <div class="hero-content reveal">
+        <p class="eyebrow">PC only • Multiplayer Role Play</p>
+        <h1 class="hero-title">NeoxOnline</h1>
+        <p class="hero-subtitle">Погрузись в атмосферу большого онлайн-города: фракции, бизнесы, гонки, работа, события и свобода выбора роли.</p>
+        <div class="hero-actions">
+          <button class="primary-btn big" data-comment="// CHANGE LINK HERE">Начать играть</button>
+          <button class="ghost-btn big" data-comment="// CHANGE LINK HERE">Смотреть видео</button>
+        </div>
+        <div class="stats">
+          <div><strong>24/7</strong><span>сервер</span></div>
+          <div><strong>100+</strong><span>игроков онлайн</span></div>
+          <div><strong>PC</strong><span>только компьютер</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue">Листай вниз</div>
+    </section>
+
+    <section id="updates" class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Новости проекта</p>
+          <h2>Последние обновления</h2>
+        </div>
+        <div class="updates-shell reveal">
+          <button class="round-arrow" data-comment="// CHANGE LINK HERE">‹</button>
+          <div class="updates-grid" id="updateGrid"></div>
+          <button class="round-arrow" data-comment="// CHANGE LINK HERE">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="launcher" class="section">
+      <div class="container launcher-card reveal">
+        <div>
+          <p class="eyebrow">Лаунчер для ПК</p>
+          <h2>Скачай и начни играть</h2>
+          <p>Установи ПК-лаунчер, введи никнейм и подключайся к NeoxOnline. Все ссылки и тексты легко заменить под твой проект.</p>
+          <div class="button-row">
+            <button class="primary-btn" data-comment="// CHANGE LINK HERE">Скачать для Windows</button>
+            <button class="ghost-btn" data-comment="// CHANGE LINK HERE">Инструкция</button>
+          </div>
+        </div>
+        <img class="devices" src="images/devices.svg" alt="ПК лаунчер NeoxOnline" data-comment="// CHANGE IMAGE HERE" />
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Системные требования</p>
+          <h2>Только PC версия</h2>
+        </div>
+        <div class="requirements">
+          <article class="reveal"><h3>Минимальные</h3><ul><li>Windows 10 64-bit</li><li>Intel Core i3 / AMD Ryzen 3</li><li>6 ГБ RAM</li><li>Видеокарта 2 ГБ</li><li>12 ГБ на диске</li></ul></article>
+          <article class="reveal"><h3>Рекомендуемые</h3><ul><li>Windows 10/11 64-bit</li><li>Intel Core i5 / AMD Ryzen 5</li><li>8 ГБ RAM</li><li>Видеокарта 4 ГБ</li><li>SSD и стабильный интернет</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="online" class="section online-section">
+      <div class="container online-grid">
+        <div class="reveal">
+          <p class="eyebrow">Онлайн</p>
+          <h2><span id="onlineCounter">100</span> игроков сейчас</h2>
+          <p>Живой сервер, активные фракции, бизнесы, квесты, гонки и ежедневные игровые события.</p>
+          <button class="primary-btn" data-comment="// CHANGE LINK HERE">Мониторинг сервера</button>
+        </div>
+        <img class="map-card reveal" src="images/map.svg" alt="Карта игрового мира" data-comment="// CHANGE IMAGE HERE" />
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-card reveal">
+        <p class="eyebrow">О NeoxOnline</p>
+        <h2>Город, где решаешь ты</h2>
+        <p>Выбирай профессию, вступай во фракции, покупай транспорт, развивай бизнес и создавай собственную историю в ПК role play мире.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand"><span class="brand-mark">N</span><span class="brand-name">NeoxOnline</span></div>
+      <p>© 2026 NeoxOnline. PC Role Play project.</p>
+      <div class="footer-links"><a href="#">Форум</a><a href="#">VK</a><a href="#">Telegram</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
