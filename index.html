@@ -46,21 +46,24 @@
 
   <main>
     <section id="home" class="hero-section relative min-h-screen overflow-hidden px-5 pt-32 lg:px-8">
-      <img class="hero-bg" src="images/background-neox.svg" alt="Фиолетовый космический фон NeoxOnline" data-comment="// CHANGE IMAGE HERE" />
-      <div class="mx-auto flex max-w-7xl items-center justify-center py-20 text-center">
-        <div class="relative z-10 reveal mx-auto max-w-5xl">
+      <img class="hero-bg" src="images/hero-city.svg" alt="Ночной город role play сервера" data-comment="// CHANGE IMAGE HERE" />
+      <div class="mx-auto grid max-w-7xl items-center gap-12 py-14 lg:grid-cols-[1fr_.9fr]">
+        <div class="relative z-10 reveal">
           <p class="eyebrow">Online Game • PC • Android</p>
-          <h1 class="hero-title">NeoxOnline<br><span>Role Play</span></h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Многопользовательская онлайн игра с огромным открытым миром, где ты сам выбираешь роль, путь и историю своего персонажа.</p>
-          <div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+          <h1 class="hero-title">Твой город.<br><span>Твои правила.</span></h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Многопользовательская role play игра с открытым миром: стань полицейским, гонщиком, бизнесменом, медиком или легендой улиц.</p>
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
             <button class="primary-btn big" data-comment="// CHANGE LINK HERE">Начать игру</button>
-            <button class="ghost-btn big" data-comment="// CHANGE LINK HERE">Видео об игре</button>
+            <button class="ghost-btn big" data-comment="// CHANGE LINK HERE">Смотреть трейлер</button>
           </div>
-          <div class="stats mx-auto mt-10 grid max-w-xl grid-cols-3 gap-3">
+          <div class="stats mt-10 grid max-w-xl grid-cols-3 gap-3">
             <div><strong>24/7</strong><span>сервер</span></div>
             <div><strong>100+</strong><span>онлайн</span></div>
             <div><strong>PC/Mobile</strong><span>синхрон</span></div>
           </div>
+        </div>
+        <div class="relative z-10 reveal delay-150">
+          <img class="character-float mx-auto w-full max-w-lg" src="images/hero-character.svg" alt="Игровой персонаж NeoxOnline" data-comment="// CHANGE IMAGE HERE" />
         </div>
       </div>
     </section>
@@ -70,7 +73,7 @@
         <p class="eyebrow">Обновления</p>
         <h2>Свежие события сервера</h2>
       </div>
-      <div class="updates-shell reveal"><button class="round-arrow" data-comment="// CHANGE LINK HERE">‹</button><div class="grid gap-6 md:grid-cols-3" id="updateGrid"></div><button class="round-arrow" data-comment="// CHANGE LINK HERE">›</button></div>
+      <div class="grid gap-6 md:grid-cols-3" id="updateGrid"></div>
     </section>
 
     <section id="launcher" class="section px-5 lg:px-8">
