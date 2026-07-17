@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEOX — атмосферный streetwear каталог в темной эстетике пустынного запада." />
+  <title>NEOX Desert Streetwear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: '#d7a45f',
+            clay: '#b85d38',
+            cactus: '#6f8f5f',
+            night: '#080707',
+            smoke: '#171312'
+          },
+          fontFamily: {
+            display: ['Impact', 'Haettenschweiler', 'Arial Narrow', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(215, 164, 95, .25)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-night text-stone-100 font-body overflow-x-hidden">
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-night/75 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Главная навигация">
+      <a href="#home" class="group flex items-center gap-3" aria-label="NEOX home">
+        <span class="grid h-10 w-10 place-items-center rounded-full border border-sand/50 bg-sand/10 text-xl shadow-glow">✦</span>
+        <span class="font-display text-3xl uppercase tracking-widest text-white">NEOX</span>
+      </a>
+      <button class="nav-toggle md:hidden" type="button" aria-label="Открыть меню" aria-expanded="false" data-comment="// CHANGE LINK HERE">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu hidden items-center gap-8 md:flex">
+        <a class="nav-link" href="#catalog">Каталог</a>
+        <a class="nav-link" href="#new">Новинки</a>
+        <a class="nav-link" href="#story">Атмосфера</a>
+        <button class="magnetic-btn rounded-full bg-sand px-6 py-3 text-sm font-black uppercase tracking-widest text-night transition hover:bg-white" data-comment="// CHANGE LINK HERE">Shop now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero relative min-h-screen overflow-hidden px-5 pt-32 lg:px-8">
+      <div class="desert-orb orb-one"></div>
+      <div class="desert-orb orb-two"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="reveal">
+          <p class="mb-5 inline-flex rounded-full border border-sand/30 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[.35em] text-sand">Dark desert drop</p>
+          <h1 class="font-display text-6xl uppercase leading-none tracking-tight sm:text-7xl lg:text-9xl">
+            Arizona<br><span class="text-gradient">energy</span><br>streetwear
+          </h1>
+          <p class="mt-7 max-w-xl text-lg leading-8 text-stone-300">Свободные силуэты, выжженная солнцем палитра, ночной неон и вайб road-trip мерча — без копирования, только похожая атмосфера.</p>
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <button class="magnetic-btn rounded-full bg-white px-8 py-4 font-black uppercase tracking-widest text-night" data-comment="// CHANGE LINK HERE">Смотреть каталог</button>
+            <button class="magnetic-btn rounded-full border border-sand/50 px-8 py-4 font-black uppercase tracking-widest text-sand hover:bg-sand hover:text-night" data-comment="// CHANGE LINK HERE">Новые поступления</button>
+          </div>
+        </div>
+        <div class="hero-card reveal delay-150">
+          <img src="images/hero-jacket.svg" alt="Черная streetwear куртка с пустынным принтом" class="floating-img mx-auto w-full max-w-lg" data-comment="// CHANGE IMAGE HERE" />
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end reveal">
+        <div>
+          <p class="section-kicker">Каталог товаров</p>
+          <h2 class="section-title">Выбери свой desert fit</h2>
+        </div>
+        <button class="magnetic-btn w-fit rounded-full border border-white/15 px-6 py-3 text-sm font-bold uppercase tracking-widest hover:border-sand hover:text-sand" data-comment="// CHANGE LINK HERE">Все товары</button>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" id="productGrid"></div>
+    </section>
+
+    <section id="new" class="relative overflow-hidden border-y border-white/10 bg-smoke px-5 py-24 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+        <div class="reveal">
+          <p class="section-kicker">Новые поступления</p>
+          <h2 class="section-title">Midnight canyon capsule</h2>
+          <p class="mt-5 text-stone-300">Лимитированная серия с градиентами заката, винтажными принтами и плотными тканями для прохладных ночей.</p>
+          <button class="magnetic-btn mt-8 rounded-full bg-clay px-8 py-4 font-black uppercase tracking-widest text-white hover:bg-sand hover:text-night" data-comment="// CHANGE LINK HERE">Открыть дроп</button>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="drop-card reveal delay-100">
+            <img src="images/new-hoodie.svg" alt="Худи из новой коллекции" data-comment="// CHANGE IMAGE HERE" />
+            <div><span>New / 01</span><h3>Canyon Oversize Hoodie</h3></div>
+          </article>
+          <article class="drop-card reveal delay-200 md:translate-y-12">
+            <img src="images/new-cap.svg" alt="Кепка из новой коллекции" data-comment="// CHANGE IMAGE HERE" />
+            <div><span>New / 02</span><h3>Dust Runner Cap</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="mx-auto max-w-7xl px-5 py-24 text-center lg:px-8 reveal">
+      <p class="section-kicker">Атмосфера</p>
+      <h2 class="mx-auto max-w-4xl font-display text-5xl uppercase leading-tight md:text-7xl">Тёмная витрина для бренда, который звучит как пустынный бас на закате.</h2>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-5 py-10 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
+      <p class="font-display text-3xl tracking-widest">NEOX</p>
+      <p class="text-sm text-stone-400">© 2026. Тексты, цены и ссылки вынесены в простые редактируемые блоки.</p>
+      <div class="flex gap-4 text-sm uppercase tracking-widest text-stone-300">
+        <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
