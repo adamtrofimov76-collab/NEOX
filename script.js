@@ -1,64 +1,59 @@
-const editableUpdates = [
-  {
-    title: 'Большой летний ивент',
-    text: 'Новые задания, редкие награды, ночные гонки и временные активности для всех игроков.',
-    image: 'images/update-race.svg'
-  },
-  {
-    title: 'Фракции и профессии',
-    text: 'Полицейские, медики, таксисты, механики и криминальные группировки получили свежие сценарии.',
-    image: 'images/update-factions.svg'
-  },
-  {
-    title: 'Город стал живее',
-    text: 'Добавлены точки интереса, улучшенная карта, бизнесы, новые интерьеры и ambient-анимации.',
-    image: 'images/update-city.svg'
-  }
+const editableProducts = [
+  { name: 'Sunburn Graphic Tee', price: '$48', tag: 'Bestseller', image: 'images/product-tee.svg' },
+  { name: 'Rattlesnake Work Pants', price: '$96', tag: 'Heavy cotton', image: 'images/product-pants.svg' },
+  { name: 'Mirage Mesh Jersey', price: '$74', tag: 'Limited', image: 'images/product-jersey.svg' },
+  { name: 'Desert Motel Tote', price: '$42', tag: 'Accessory', image: 'images/product-tote.svg' }
 ];
 
-const updateGrid = document.querySelector('#updateGrid');
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-const onlineCounter = document.querySelector('#onlineCounter');
+const productGrid = document.querySelector('#productGrid');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-function renderUpdates() {
-  updateGrid.innerHTML = editableUpdates.map((item) => `
-    <article class="update-card reveal">
-      <img src="${item.image}" alt="${item.title}" data-comment="// CHANGE IMAGE HERE" />
-      <div>
-        <h3>${item.title}</h3>
-        <p class="mt-3">${item.text}</p>
-        <button class="ghost-btn mt-6" data-comment="// CHANGE LINK HERE">Подробнее</button>
+function renderProducts() {
+  productGrid.innerHTML = editableProducts.map((product) => `
+    <article class="product-card reveal">
+      <div class="absolute left-4 top-4 z-10 rounded-full bg-night/80 px-3 py-2 text-xs font-black uppercase tracking-widest text-sand">${product.tag}</div>
+      <img src="${product.image}" alt="${product.name}" data-comment="// CHANGE IMAGE HERE" />
+      <div class="p-5 pt-0">
+        <h3 class="text-2xl font-black">${product.name}</h3>
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <span class="text-xl font-black text-sand">${product.price}</span>
+          <button class="rounded-full bg-white px-5 py-3 text-xs font-black uppercase tracking-widest text-night hover:bg-sand" data-comment="// CHANGE LINK HERE">Купить</button>
+        </div>
       </div>
     </article>
   `).join('');
 }
 
-function initRevealAnimation() {
+function observeReveals() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) entry.target.classList.add('is-visible');
     });
-  }, { threshold: 0.14 });
+  }, { threshold: 0.16 });
 
   document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 }
 
-function animateOnlineCounter() {
-  let current = 0;
-  const target = 100;
-  const timer = setInterval(() => {
-    current += 4;
-    onlineCounter.textContent = String(Math.min(current, target));
-    if (current >= target) clearInterval(timer);
-  }, 35);
+function initMagneticButtons() {
+  document.querySelectorAll('.magnetic-btn').forEach((button) => {
+    button.addEventListener('mousemove', (event) => {
+      const rect = button.getBoundingClientRect();
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      button.style.transform = `translate(${x * 0.08}px, ${y * 0.18}px)`;
+    });
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = 'translate(0, 0)';
+    });
+  });
 }
 
-burger.addEventListener('click', () => {
-  const isOpen = menu.classList.toggle('is-open');
-  burger.setAttribute('aria-expanded', String(isOpen));
+navToggle.addEventListener('click', () => {
+  const isOpen = navMenu.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-renderUpdates();
-initRevealAnimation();
-animateOnlineCounter();
+renderProducts();
+observeReveals();
+initMagneticButtons();
