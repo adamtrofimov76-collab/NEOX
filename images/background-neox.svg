@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="72%" r="45%"><stop offset="0" stop-color="#b04cff"/><stop offset=".35" stop-color="#4b168f"/><stop offset="1" stop-color="#02020a"/></radialGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#03030b"/><stop offset=".45" stop-color="#13052d"/><stop offset="1" stop-color="#020207"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="960" cy="780" r="530" fill="url(#glow)" opacity=".88" filter="url(#blur)"/>
+  <g opacity=".55" fill="#2a0b55"><path d="M0 510c145-90 250-55 330-15 130 65 210 10 310-35 140-65 220-15 320 15 130 40 240-65 390-30 150 35 260 120 570 40v595H0z"/><path d="M0 650 130 520l80 120 80-180 150 210 120-155 90 155 160-230 140 220 95-140 120 160 110-170 175 190 180-250 290 250v380H0z" fill="#07030f"/></g>
+  <g stroke="#a855ff" stroke-width="2" opacity=".5"><path d="M370 260c240-160 320 90 500-55s330 80 680-105" fill="none"/><path d="M180 190c270 140 390-80 610 50s360 30 570-75" fill="none"/></g>
+  <g font-family="Impact,Arial Black,sans-serif" text-anchor="middle" fill="none" stroke="#b35cff" stroke-width="5" opacity=".72">
+    <text x="960" y="650" font-size="520">N</text>
+  </g>
+  <text x="960" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="44" letter-spacing="34" fill="#e8c7ff">NEOXONLINE</text>
+  <rect width="1920" height="1080" fill="black" opacity=".18"/>
+</svg>
